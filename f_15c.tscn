@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bti0rmmaphvys"]
+
+[ext_resource type="Script" uid="uid://bryqxqcclq7cv" path="res://f_15c.gd" id="1_oqogt"]
+[ext_resource type="Texture2D" uid="uid://oi4vad5na4r7" path="res://PlaneSquare.png" id="2_4yq5x"]
+
+[node name="F-15C" type="Node2D"]
+z_index = 2
+script = ExtResource("1_oqogt")
+
+[node name="2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = 2
+offset_left = 29.0
+offset_top = 26.0
+offset_right = 69.0
+offset_bottom = 49.0
+text = "2"
+
+[node name="Plane" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+offset_left = 16.0
+offset_top = 28.0
+offset_right = 59.0
+offset_bottom = 51.0
+text = "Plane"
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.733333)
+offset_right = 72.0
+offset_bottom = 76.0
+
+[node name="PlaneSquare" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(36, 39)
+texture = ExtResource("2_4yq5x")
+
+[node name="Winchester" type="ColorRect" parent="."]
+visible = false
+offset_left = 48.0
+offset_top = 5.0
+offset_right = 71.0
+offset_bottom = 29.0
+color = Color(1, 1, 0, 1)
+
+[node name="Winchester2" type="ColorRect" parent="."]
+visible = false
+offset_left = 48.0
+offset_top = 49.0
+offset_right = 71.0
+offset_bottom = 73.0
+color = Color(0, 1, 0, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

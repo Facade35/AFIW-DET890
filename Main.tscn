@@ -1,0 +1,473 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2u4qatl1m3u4"]
+
+[ext_resource type="Texture2D" uid="uid://sps8dgxtlpvu" path="res://WargameMap Background.png" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://ddne6a21ffc30" path="res://main.gd" id="1_r0du0"]
+[ext_resource type="Texture2D" uid="uid://dexp4gq10yhdt" path="res://Bones.png" id="3_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://b6xkie56pfuqb" path="res://Range.png" id="3_fos0i"]
+[ext_resource type="Texture2D" uid="uid://dxegc7fi4didr" path="res://d4.png" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://bl74d5yyhqlso" path="res://Missile.png" id="6_lgr22"]
+[ext_resource type="Texture2D" uid="uid://bb1tjfx7cl4pq" path="res://Radar.png" id="7_trn2v"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_r0du0")
+
+[node name="WargameMapBackground" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(581, 326)
+scale = Vector2(0.353951, 0.317851)
+texture = ExtResource("1_glv2v")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -1
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 1177.0
+offset_bottom = 666.0
+
+[node name="Panel2" type="Panel" parent="."]
+z_index = -1
+offset_left = 375.0
+offset_top = 9.0
+offset_right = 788.0
+offset_bottom = 642.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 811.0
+offset_top = 9.0
+offset_right = 1120.0
+offset_bottom = 227.0
+
+[node name="Label" type="Label" parent="Panel3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 16.0
+offset_right = 119.0
+offset_bottom = 127.0
+text = "Plane:"
+
+[node name="Loyalty" type="Label" parent="Panel3"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 130.0
+offset_right = 77.0
+offset_bottom = 153.0
+text = "Loyalty:"
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 811.0
+offset_top = 440.0
+offset_right = 902.0
+offset_bottom = 641.0
+
+[node name="Label" type="Label" parent="Panel4"]
+layout_mode = 0
+offset_top = -27.0
+offset_right = 90.0
+offset_bottom = -4.0
+text = "Move"
+horizontal_alignment = 1
+
+[node name="MoveButton" type="Button" parent="Panel4"]
+layout_mode = 0
+offset_top = -90.0
+offset_right = 90.0
+offset_bottom = -31.0
+
+[node name="MRange" type="Label" parent="Panel4"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 90.0
+offset_bottom = 37.0
+text = "Range:"
+horizontal_alignment = 1
+
+[node name="MDonel" type="Label" parent="Panel4"]
+layout_mode = 0
+offset_top = 156.0
+offset_right = 90.0
+offset_bottom = 179.0
+text = "Done:"
+horizontal_alignment = 1
+
+[node name="Range" type="Sprite2D" parent="Panel4"]
+modulate = Color(1, 1, 1, 0.713726)
+position = Vector2(44, 55)
+scale = Vector2(0.0704593, 0.0363248)
+texture = ExtResource("3_fos0i")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 921.0
+offset_top = 440.0
+offset_right = 1012.0
+offset_bottom = 641.0
+
+[node name="Label" type="Label" parent="Panel5"]
+layout_mode = 0
+offset_top = -27.0
+offset_right = 90.0
+offset_bottom = -4.0
+text = "Acquire"
+horizontal_alignment = 1
+
+[node name="AcquireButton" type="Button" parent="Panel5"]
+layout_mode = 0
+offset_top = -90.0
+offset_right = 90.0
+offset_bottom = -31.0
+
+[node name="ARange" type="Label" parent="Panel5"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 90.0
+offset_bottom = 37.0
+text = "Range:"
+horizontal_alignment = 1
+
+[node name="ADone" type="Label" parent="Panel5"]
+layout_mode = 0
+offset_top = 156.0
+offset_right = 90.0
+offset_bottom = 179.0
+text = "Done:"
+horizontal_alignment = 1
+
+[node name="AMod" type="Label" parent="Panel5"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = 86.0
+offset_right = 63.0
+offset_bottom = 109.0
+text = "AM"
+horizontal_alignment = 1
+
+[node name="Range" type="Sprite2D" parent="Panel5"]
+modulate = Color(1, 1, 1, 0.713726)
+position = Vector2(44, 55)
+scale = Vector2(0.0704593, 0.0363248)
+texture = ExtResource("3_fos0i")
+
+[node name="Radar" type="Sprite2D" parent="Panel5"]
+modulate = Color(1, 1, 1, 0.807843)
+position = Vector2(56, 114)
+scale = Vector2(0.0369792, 0.0352605)
+texture = ExtResource("7_trn2v")
+
+[node name="Panel6" type="Panel" parent="."]
+offset_left = 1031.0
+offset_top = 440.0
+offset_right = 1122.0
+offset_bottom = 641.0
+
+[node name="Label" type="Label" parent="Panel6"]
+layout_mode = 0
+offset_top = -27.0
+offset_right = 90.0
+offset_bottom = -4.0
+text = "Shoot"
+horizontal_alignment = 1
+
+[node name="ShootButton" type="Button" parent="Panel6"]
+layout_mode = 0
+offset_top = -90.0
+offset_right = 90.0
+offset_bottom = -31.0
+
+[node name="SRange" type="Label" parent="Panel6"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 90.0
+offset_bottom = 37.0
+text = "Range:"
+horizontal_alignment = 1
+
+[node name="SDone" type="Label" parent="Panel6"]
+layout_mode = 0
+offset_top = 156.0
+offset_right = 90.0
+offset_bottom = 179.0
+text = "Done:"
+horizontal_alignment = 1
+
+[node name="SRoll" type="Label" parent="Panel6"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 86.0
+offset_right = 70.0
+offset_bottom = 109.0
+text = "SR"
+horizontal_alignment = 1
+
+[node name="Range" type="Sprite2D" parent="Panel6"]
+modulate = Color(1, 1, 1, 0.713726)
+position = Vector2(44, 55)
+scale = Vector2(0.0704593, 0.0363248)
+texture = ExtResource("3_fos0i")
+
+[node name="Missile" type="Sprite2D" parent="Panel6"]
+modulate = Color(1, 1, 1, 0.788235)
+position = Vector2(46, 112)
+scale = Vector2(0.0196354, 0.0175)
+texture = ExtResource("6_lgr22")
+
+[node name="Panel7" type="Panel" parent="."]
+offset_left = 23.0
+offset_top = 11.0
+offset_right = 360.0
+offset_bottom = 143.0
+
+[node name="Bones" type="Sprite2D" parent="Panel7"]
+modulate = Color(0, 0, 1, 0.509804)
+z_index = -1
+position = Vector2(167, 68)
+scale = Vector2(0.484375, 0.399351)
+texture = ExtResource("3_cm0pq")
+
+[node name="Panel8" type="Panel" parent="."]
+offset_left = 23.0
+offset_top = 508.0
+offset_right = 360.0
+offset_bottom = 640.0
+
+[node name="Bones" type="Sprite2D" parent="Panel8"]
+modulate = Color(1, 0, 0, 0.509804)
+z_index = -1
+position = Vector2(167, 68)
+scale = Vector2(0.484375, 0.399351)
+texture = ExtResource("3_cm0pq")
+
+[node name="Panel9" type="Panel" parent="."]
+offset_left = 24.0
+offset_top = 159.0
+offset_right = 210.0
+offset_bottom = 490.0
+
+[node name="Label" type="Label" parent="Panel9"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 11.0
+offset_right = 125.0
+offset_bottom = 64.0
+text = "Rolled a:"
+
+[node name="Label2" type="Label" parent="Panel9"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 64.0
+offset_right = 142.0
+offset_bottom = 122.0
+text = "Needed a:"
+
+[node name="Label3" type="Label" parent="Panel9"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 115.0
+offset_right = 127.0
+offset_bottom = 181.0
+text = "Outcome:"
+
+[node name="Cell1" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.231373)
+offset_left = 391.0
+offset_top = 435.0
+offset_right = 774.0
+offset_bottom = 505.0
+
+[node name="Cell2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.231373)
+offset_left = 390.0
+offset_top = 364.0
+offset_right = 773.0
+offset_bottom = 434.0
+
+[node name="Cell3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.231373)
+offset_left = 390.0
+offset_top = 292.0
+offset_right = 773.0
+offset_bottom = 362.0
+
+[node name="Cell4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.231373)
+offset_left = 389.0
+offset_top = 221.0
+offset_right = 772.0
+offset_bottom = 291.0
+
+[node name="Cell5" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.231373)
+offset_left = 390.0
+offset_top = 150.0
+offset_right = 773.0
+offset_bottom = 220.0
+
+[node name="Panel10" type="Panel" parent="."]
+offset_left = 813.0
+offset_top = 241.0
+offset_right = 1121.0
+offset_bottom = 335.0
+
+[node name="EndTurn" type="Button" parent="Panel10"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 302.0
+offset_bottom = 86.0
+text = "->End Turn->"
+
+[node name="D4" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 0.635294)
+position = Vector2(117, 395)
+scale = Vector2(0.23003, 0.216461)
+texture = ExtResource("3_r0du0")
+
+[node name="ForePanel" type="Panel" parent="."]
+visible = false
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 1128.0
+offset_bottom = 636.0
+
+[node name="StandardPanel" type="ColorRect" parent="ForePanel"]
+z_index = 1
+layout_mode = 0
+offset_left = 17.0
+offset_top = 10.0
+offset_right = 338.0
+offset_bottom = 420.0
+color = Color(0.586761, 0.278846, 0.195128, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ForePanel/StandardPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 310.0
+offset_bottom = 400.0
+color = Color(0.344793, 0.381252, 0.399245, 1)
+
+[node name="Tutbutton" type="Button" parent="ForePanel"]
+z_index = 1
+layout_mode = 0
+offset_left = 116.0
+offset_top = 319.0
+offset_right = 237.0
+offset_bottom = 403.0
+text = "-> Next ->"
+
+[node name="Label" type="Label" parent="ForePanel"]
+z_index = 2
+layout_mode = 0
+offset_left = 45.0
+offset_top = 33.0
+offset_right = 312.0
+offset_bottom = 368.0
+text = "Air Force Indo-Pacific Wargame Digital Education Software Program. 
+
+Developed by the Gauldin-Thornton i5 detachment of Air Force ROTC Detachment 890. 
+
+Based on Robert Dantzler's Air Force Wargame: Indo-Pacific. (2024)
+
+"
+autowrap_mode = 2
+
+[node name="Squadron Panel" type="Control" parent="."]
+visible = false
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_left = 387.0
+offset_top = 144.0
+offset_right = 772.0
+offset_bottom = 501.0
+
+[node name="StandardPanel" type="ColorRect" parent="Squadron Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 327.0
+offset_bottom = 411.0
+scale = Vector2(1.18176, 0.875981)
+color = Color(0.586761, 0.278846, 0.195128, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Squadron Panel/StandardPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 313.0
+offset_bottom = 400.0
+color = Color(0.344793, 0.381252, 0.399245, 1)
+
+[node name="CancelSquad" type="Button" parent="Squadron Panel"]
+z_index = 1
+layout_mode = 0
+offset_left = 277.0
+offset_top = 296.0
+offset_right = 362.0
+offset_bottom = 341.0
+text = "Cancel "
+
+[node name="Label" type="Label" parent="Squadron Panel"]
+z_index = 2
+layout_mode = 0
+offset_left = 60.0
+offset_top = 16.0
+offset_right = 327.0
+offset_bottom = 91.0
+text = "Select Squadron For Deployment:
+
+"
+autowrap_mode = 2
+
+[node name="BlueLabel" type="Label" parent="Squadron Panel"]
+z_index = 2
+layout_mode = 0
+offset_left = 49.0
+offset_top = 60.0
+offset_right = 146.0
+offset_bottom = 135.0
+text = "Blue Team:
+
+"
+autowrap_mode = 2
+
+[node name="RedLabel" type="Label" parent="Squadron Panel"]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_left = 49.0
+offset_top = 60.0
+offset_right = 146.0
+offset_bottom = 135.0
+text = "Red Team"
+autowrap_mode = 2
+
+[node name="DeploySquad" type="Button" parent="Squadron Panel"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 30.0
+offset_top = 296.0
+offset_right = 115.0
+offset_bottom = 341.0
+text = "Deploy"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 223.0
+offset_top = 161.0
+offset_right = 359.0
+offset_bottom = 491.0
+text = "Squadrons:"
+
+[connection signal="pressed" from="Panel4/MoveButton" to="." method="_on_move_button_pressed"]
+[connection signal="pressed" from="Panel5/AcquireButton" to="." method="_on_acquire_button_pressed"]
+[connection signal="pressed" from="Panel6/ShootButton" to="." method="_on_shoot_button_pressed"]
+[connection signal="pressed" from="Cell1" to="." method="_on_cell_1_pressed"]
+[connection signal="pressed" from="Cell2" to="." method="_on_cell_2_pressed"]
+[connection signal="pressed" from="Cell3" to="." method="_on_cell_3_pressed"]
+[connection signal="pressed" from="Cell4" to="." method="_on_cell_4_pressed"]
+[connection signal="pressed" from="Cell5" to="." method="_on_cell_5_pressed"]
+[connection signal="pressed" from="Panel10/EndTurn" to="." method="_on_end_turn_pressed"]
+[connection signal="pressed" from="ForePanel/Tutbutton" to="." method="_on_tutbutton_pressed"]
+[connection signal="pressed" from="Squadron Panel/CancelSquad" to="." method="_on_cancel_squad_pressed"]
+[connection signal="pressed" from="Squadron Panel/DeploySquad" to="." method="_on_deploy_squad_pressed"]
+[connection signal="pressed" from="Button" to="." method="_SquadMenuOpen"]

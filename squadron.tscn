@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcsma5xshsib8"]
+
+[ext_resource type="Script" uid="uid://c7r6v23xf6mns" path="res://squadron.gd" id="1_jmvcg"]
+
+[node name="Squadron" type="Node2D"]
+z_index = 8
+script = ExtResource("1_jmvcg")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_left = 9.0
+offset_top = -2.0
+offset_right = 49.0
+offset_bottom = 21.0
+text = "F-16"
+
+[node name="HRect1" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 4.0
+offset_top = 31.0
+offset_right = 17.0
+offset_bottom = 45.0
+color = Color(0.376471, 0.376471, 0.376471, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+texture_filter = 1
+offset_right = 52.0
+offset_bottom = 49.0
+
+[node name="HRect2" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 19.0
+offset_top = 31.0
+offset_right = 32.0
+offset_bottom = 45.0
+color = Color(0.377919, 0.377919, 0.377919, 1)
+
+[node name="HRect3" type="ColorRect" parent="."]
+visible = false
+z_index = 1
+offset_left = 34.0
+offset_top = 31.0
+offset_right = 47.0
+offset_bottom = 45.0
+color = Color(0.377919, 0.377919, 0.377919, 1)
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.733333)
+offset_right = 52.0
+offset_bottom = 49.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
